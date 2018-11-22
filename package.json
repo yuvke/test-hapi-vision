@@ -1,0 +1,23 @@
+{
+  "name": "test-hapi-vision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "pm2 start index.js  --name vision-test",
+    "start-monitor": "pm2 monit vision-test",
+    "start-load-test": "loadtest -c 50 --index=cachekiller \"http://localhost:3000/\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "hapi": "^17.7.0",
+    "hoek": "^6.0.3",
+    "loadtest": "^3.0.4",
+    "pm2": "^3.2.2",
+    "vision": "^5.4.3"
+  }
+}
