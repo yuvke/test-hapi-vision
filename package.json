@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-server": "pm2 start index.js  --name vision-test",
+    "stop-server": "pm2 stop index.js  --name vision-test",
     "start-monitor": "pm2 monit vision-test",
     "start-load-test": "loadtest -c 50 --index=cachekiller \"http://localhost:3000/\"",
     "test": "echo \"Error: no test specified\" && exit 1"
